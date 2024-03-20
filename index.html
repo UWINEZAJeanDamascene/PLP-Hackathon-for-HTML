@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>hackathon-challenge</title>
+</head>
+<body>
+  <header>
+    <h1>hackathon-challenge</h1>
+    <p>this is a huckathon challenge</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">home</a></li>
+      <li><a href="#aboutus">contact us</a></li>
+      <li><a href="https://github.com/MuriithiEric/web-technologies-level-1-hackathon/blob/main/index.html" target="_blank" class="right">Github</a></li>
+    </ul>
+  </nav>
+  <section>
+    <figure>
+      <img src="images/jay.jpg" alt="my image"  >
+      <figcaption><strong>jay-winn developer</strong></figcaption>
+    </figure>
+  </section>
+  <section>
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+    
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+    
+        <fieldset>
+          <legend>Gender:</legend>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </fieldset><br>
+    
+        <label for="subjects">Subjects:</label>
+        <select id="subjects" name="subjects[]" multiple>
+          <option value="english">English</option>
+          <option value="math">Math</option>
+          <option value="science">Science</option>
+          <option value="art">Art and Craft</option>
+          <option value="agriculture">Agriculture</option>
+          <option value="geography">Geography</option>
+          <option value="history">History</option>
+        </select><br><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+    
+        <input type="hidden" id="sessionId" name="sessionId" value="your_session_id">
+    
+        <button type="reset" >Cancel</button>
+        <button type="submit">Register</button>
+      </form>
+  </section>
+</body>
+</html>
