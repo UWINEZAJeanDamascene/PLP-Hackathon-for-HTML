@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="styles.css">
   <title>hackathon-challenge</title>
 </head>
 <body>
+  <div class="container">
   <header>
     <h1>hackathon-challenge</h1>
     <p>this is a huckathon challenge</p>
@@ -14,60 +16,85 @@
   <nav>
     <ul>
       <li><a href="#home">home</a></li>
-      <li><a href="#aboutus">contact us</a></li>
-      <li><a href="https://github.com/MuriithiEric/web-technologies-level-1-hackathon/blob/main/index.html" target="_blank" class="right">Github</a></li>
+      <li><a href="#my-bio" class="left">my-bio</a></li>
+      <li><a href="#about us">contact us</a></li>
+      <li><a href="#my-bio" class="left">my-bio</a></li>
+      <li><a href="#skills" class="left">skills</a></li>
+      <li><a href="#projects" class="left" >projects</a></li>
+      <li><a href="https://github.com/UWINEZAJeanDamascene" target="_blank" class="right">Github</a></li>
     </ul>
   </nav>
-  <section>
+  <section class="figcpn">
     <figure>
       <img src="images/jay.jpg" alt="my image"  >
       <figcaption><strong>jay-winn developer</strong></figcaption>
     </figure>
   </section>
+  <main>
+    <h1>about us</h1>
+   <p>
+    Jay-Winn is a seasoned software engineer known for crafting <br>innovative solutions that exceed expectations. With a deep passion for technology and a proven <br> track record of delivering exceptional results, Jay-Winn thrives in dynamic environments. Armed with <br>a blend of technical expertise, creative vision, and relentless determination, Jay-Winn is poised <br> to make a lasting impact in any software development endeavor.
+ </p>
+   </main>
+  
+   <h1 id="skill" >skills</h1>
+   <section id="skills">
+      <i class="fa-brands fa-html5"> html</i>
+    <i class="fa-brands fa-js">js</i>
+    <i class="fa-brands fa-css3-alt">css</i>
+    <i class="fa-brands fa-php">php</i>
+    <i class="fa-brands fa-github">github</i>
+    <i class="fa-brands fa-react">react</i>
+    <i class="fa-brands fa-python">python</i>
+    <i class="fa-solid fa-database">database</i>
+    <i class="fa-brands fa-uncharted">sf</i>
+   </section>
+   <section>
+    <h1 id="contacts">contacts</h1>
+    <ul>
+      <li>email-address:jayfcode@gmail.com</li>
+      <li>phone-number:123-456-2121</li>
+      <li>github:jaycode</li>
+      <li>linkedin:jay-winn</li>
+    </ul>
+   </section>
+  
+   <h1 id="project">project</h1>
+   <p>here are some of my projrcts that i have worked on</p>
+   <section id="projects">
+    <figure>
+     <a href="weatherapp.html"><img src="images/Weather-Forecast-Mobile-App.png" alt="image"></a> 
+      <figcaption>weather app project</figcaption>
+    </figure>
+    <figure>
+    <a href="todolistapp.html">  <img src="images/to-do-list-apps.png" alt="image"></a>
+      <figcaption>to-do list  app project</figcaption>
+    </figure>
+    <figure>
+      <img src="images/e-letter-ecommerce-logo-template_155846-original.jpg" alt="image">
+      <figcaption>E-commerce website project</figcaption>
+    </figure>
+   </section>
   <section>
-      <h2>Registration Form</h2>
-      <form id="registrationForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-    
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required><br><br>
-    
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-    
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br><br>
-    
-        <fieldset>
-          <legend>Gender:</legend>
-          <input type="radio" id="male" name="gender" value="male">
-          <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="female">
-          <label for="female">Female</label>
-          <input type="radio" id="other" name="gender" value="other">
-          <label for="other">Other</label>
-        </fieldset><br>
-    
-        <label for="subjects">Subjects:</label>
-        <select id="subjects" name="subjects[]" multiple>
-          <option value="english">English</option>
-          <option value="math">Math</option>
-          <option value="science">Science</option>
-          <option value="art">Art and Craft</option>
-          <option value="agriculture">Agriculture</option>
-          <option value="geography">Geography</option>
-          <option value="history">History</option>
-        </select><br><br>
-    
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-    
-        <input type="hidden" id="sessionId" name="sessionId" value="your_session_id">
-    
-        <button type="reset" >Cancel</button>
-        <button type="submit">Register</button>
-      </form>
+    <h1>sarvey Form</h1>
+  
+    <form method="post" action='https://sarvey_form/jay-winn.org'>
+      <fieldset>
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+
+      <label for="terms-and-conditions">
+        <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.sarvey_form/jay-winn/">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+  </form>
+  <footer>
+    <p>&COPY;2024 jay_winn developer</p>
+  </footer>
   </section>
+</div>
 </body>
 </html>
