@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url(https://65designs.com/wp-content/uploads/2020/07/crop.jpg);
+      margin: 0;
+      padding: 0;
+    }
+    
+    .chat-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 50px auto;
+      max-width: 800px;
+    }
+    
+    .chat-section {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: .7;
+    }
+    
+    .chat-messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      width: calc(100% - 70px);
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+     border-radius: 5px;
+    }
+   
+    #send-button {
+      background-color: transparent;
+      color: white;
+      border: 1px solid black;
+      padding: 0 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: -10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    }
+    
+    #send-button:hover {
+      background-color: #45a049;
+      transition: 1s ;
+    }
+    
+    
+    .message {
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    
+    .sent {
+      background-color: #4caf50;
+      color: #fff;
+    }
+    
+    .received {
+      background-color: #ddd;
+    }
+    
+    .input-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1{
+      position: absolute;
+      margin-top: 0;
+      top: 0;
+      color: antiquewhite;
+      text-transform: capitalize;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h1>chat bot</h1>
+    <div class="chat-section">
+      <h2>User 1</h2>
+      <div id="chat-messages-1" class="chat-messages"></div>
+    </div>
+    <div class="chat-section">
+      <h2>User 2</h2>
+      <div id="chat-messages-2" class="chat-messages"></div>
+    </div>
+  </div>
+  <div class="input-container">
+    <input type="text" id="message-input" placeholder="Type a message...">
+    <button onclick="sendMessage()" id="send-button">Send</button>
+  </div>
+  <script>
+    let currentUser = 1;
+
+    function sendMessage() {
+      var input = document.getElementById("message-input");
+      var message = input.value;
+      input.value = "";
+    
+      var chatMessages1 = document.getElementById("chat-messages-1");
+      var chatMessages2 = document.getElementById("chat-messages-2");
+    
+      var newMessage = document.createElement("div");
+      newMessage.textContent = message;
+      newMessage.classList.add("message");
+    
+      if (currentUser === 1) {
+        newMessage.classList.add("sent");
+        chatMessages1.appendChild(newMessage);
+        currentUser = 2;
+      } else {
+        newMessage.classList.add("received");
+        chatMessages2.appendChild(newMessage);
+        currentUser = 1;
+      }
+    }
+    
+    
+  </script>
+</body>
+</html>
